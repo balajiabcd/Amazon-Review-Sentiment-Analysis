@@ -37,19 +37,19 @@ For this project I used Kaggle. Which you can found here: https://www.kaggle.com
 
 ## About data:  
 
-Data sonsists of 569 patients diagnosis results, test data. Out of these 212 patients are diagnosed with cancer. Data consists of 30 dependent variables and one dependent variable.  
+Dataset consists of 568454 entries. Each review was rated from 1 star to 5 star.  
+![Reviews](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/reviews-per-star.png)
 
-We can see that there are strong correlations between some of these variables using Heatmap.  
-![Heatmap-before-processing](https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/Heatmap-before-processing.png)  
+In data one column is reveiw title, and the next column is review itself. Hence these two columns are merged togather as one full_review column.  
+![data](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/data.png)
 
-Hence, we can remove these corrilated variables from our model.  
-![Heatmap-after-processing](https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/Heatmap-after-processing.png)  
+This full review column is tested for polarity, then the results are stored in a dataframe.  
+![polarity_dataframe](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/compound-score-dataframe.png)
 
-With the histplots between the variables we can see the there is clear distinction between data of patients who has cancer and data of patients who don't have cancer.  
-![Histplot](https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/Histplot.png)  
+Then different columns are created and added this dataframe. One of these columns are "good" which considers 4,5 star reviews as positive and remaining columns as negative.  
+![addition](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/review-analysis-columns-addition.png)
 
-With the scaterplot between the variables, we can see that it will be easy to separate the patients with cancer from those of without cancer.  
-![Scattereplot](https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/Scatterplot.png)
+Here 3 star reviews are hard to classify as positive or negative, hence the 3 star reviews were removed.    
 
 
 
@@ -59,7 +59,7 @@ With the scaterplot between the variables, we can see that it will be easy to se
 
 
 ## Note:  
-Here to get the accuracy of classification model we used MAE(which is one of evaluation matrics of Regression model) as an indirect way of finding acuuracy of model.  
+Here to get the accuracy was calculated in the code itself, rather than using any other library.  
 
 
 
@@ -69,10 +69,10 @@ Here to get the accuracy of classification model we used MAE(which is one of eva
 
 ## Model Result:  
 
-
-After trining and Deploying the different classification models and one regression model:  
-Random Forest model with n_estimators = 400, criterion = "entropy", gave best results with 95.61% accuracy of detection.  
-![Model](https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/randomforest%20model.png)
+Model is trained with the columns that are obtained from polarity dataframe and the newly created column "good".  
+After trining and Deploying the different classification models:  
+Random Forest model with n_estimators = 10, criterion = "gini", gave best results with 91.59% accuracy of classification.  
+![Result]([https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/randomforest%20model.png](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/Result.png))
 
 
 
