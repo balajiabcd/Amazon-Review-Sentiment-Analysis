@@ -72,7 +72,7 @@ Here to get the accuracy was calculated in the code itself, rather than using an
 Model is trained with the columns that are obtained from polarity dataframe and the newly created column "good".  
 After trining and Deploying the different classification models:  
 Random Forest model with n_estimators = 10, criterion = "gini", gave best results with 91.59% accuracy of classification.  
-![Result]([https://github.com/balajiabcd/Breast-Cancer-Detection/blob/main/randomforest%20model.png](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/Result.png))
+![Result](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/Result.png)
 
 
 
