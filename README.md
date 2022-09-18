@@ -40,7 +40,7 @@ For this project I used Kaggle. Which you can found here: https://www.kaggle.com
 Dataset consists of 568454 entries. Each review was rated from 1 star to 5 star.  
 ![Reviews](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/reviews-per-star.png)
 
-In data one column is reveiw title, and the next column is review itself. Hence these two columns are merged togather as one full_review column.  
+In data one column is summary of reveiw, and the next column is review itself. Hence these two columns are merged togather as one full_review column.  
 ![data](https://github.com/balajiabcd/Amazon-Review-Sentiment-Analysis/blob/main/Imges-repo/data.png)
 
 This full review column is tested for polarity, then the results are stored in a dataframe.  
